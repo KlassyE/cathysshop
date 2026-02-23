@@ -1,11 +1,28 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
 import { PRODUCTS } from '../data/products';
 
 export default function Shop() {
-    const [activeTab, setActiveTab] = useState('All');
+    const [searchParams, setSearchParams] = useSearchParams();
+    const initialCategory = searchParams.get('category') || 'All';
+    const [activeTab, setActiveTab] = useState(initialCategory);
+
+    useEffect(() => {
+        const category = searchParams.get('category') || 'All';
+        setActiveTab(category);
+    }, [searchParams]);
 
     const categories = ['All', 'Medicinal Herbs', 'Nutritious Foods', 'Healing Essentials', 'Eco Home'];
+
+    const handleTabChange = (category) => {
+        setActiveTab(category);
+        if (category === 'All') {
+            setSearchParams({});
+        } else {
+            setSearchParams({ category });
+        }
+    };
 
     const filteredProducts = activeTab === 'All'
         ? PRODUCTS
@@ -26,10 +43,10 @@ export default function Shop() {
                 {categories.map(category => (
                     <button
                         key={category}
-                        onClick={() => setActiveTab(category)}
+                        onClick={() => handleTabChange(category)}
                         className={`px-8 py-3 rounded-full font-bold transition-colors text-lg ${activeTab === category
-                                ? 'bg-earth-green text-white shadow-md'
-                                : 'bg-white text-gray-700 hover:bg-green-50 border border-gray-200'
+                            ? 'bg-earth-green text-white shadow-md'
+                            : 'bg-white text-gray-700 hover:bg-green-50 border border-gray-200'
                             }`}
                     >
                         {category}

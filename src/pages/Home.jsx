@@ -75,7 +75,7 @@ export default function Home() {
                             <div className="p-8 text-center">
                                 <h3 className="text-2xl font-serif font-bold text-deep-charcoal mb-2">Bushera & Wild Veg</h3>
                                 <p className="text-gray-500 mb-6 text-sm">Probiotic powerhouses and fresh greens for gut health.</p>
-                                <Link to="/shop" className="text-earth-green font-bold uppercase tracking-wide text-sm group-hover:text-soft-terracotta transition-colors">View Selection &rarr;</Link>
+                                <Link to="/shop?category=Nutritious Foods" className="text-earth-green font-bold uppercase tracking-wide text-sm group-hover:text-soft-terracotta transition-colors">View Selection &rarr;</Link>
                             </div>
                         </div>
 
@@ -91,7 +91,7 @@ export default function Home() {
                             <div className="p-8 text-center">
                                 <h3 className="text-2xl font-serif font-bold text-deep-charcoal mb-2">Healing Essentials</h3>
                                 <p className="text-gray-500 mb-6 text-sm">Wild aloe, neem, and shea cleansers carefully formulated.</p>
-                                <Link to="/shop" className="text-warm-gold font-bold uppercase tracking-wide text-sm group-hover:text-soft-terracotta transition-colors">View Remedies &rarr;</Link>
+                                <Link to="/shop?category=Healing Essentials" className="text-warm-gold font-bold uppercase tracking-wide text-sm group-hover:text-soft-terracotta transition-colors">View Remedies &rarr;</Link>
                             </div>
                         </div>
 
@@ -106,7 +106,7 @@ export default function Home() {
                             <div className="p-8 text-center">
                                 <h3 className="text-2xl font-serif font-bold text-deep-charcoal mb-2">Eco Home</h3>
                                 <p className="text-gray-500 mb-6 text-sm">Banana waste briquettes and environmentally safe cleaners.</p>
-                                <Link to="/shop" className="text-soft-terracotta font-bold uppercase tracking-wide text-sm group-hover:text-earth-green transition-colors">Shop Eco &rarr;</Link>
+                                <Link to="/shop?category=Eco Home" className="text-soft-terracotta font-bold uppercase tracking-wide text-sm group-hover:text-earth-green transition-colors">Shop Eco &rarr;</Link>
                             </div>
                         </div>
                     </div>

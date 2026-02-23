@@ -71,7 +71,7 @@ app.patch('/api/orders/:id/status', authenticateAdmin, (req, res) => {
 });
 
 // All other GET requests not handled will return our React app
-app.get('*', (req, res) => {
+app.get('/(.*)', (req, res) => {
     res.sendFile(path.join(distPath, 'index.html'));
 });
 
