@@ -70,8 +70,8 @@ app.patch('/api/orders/:id/status', authenticateAdmin, (req, res) => {
     res.json(orders[orderIndex]);
 });
 
-// All other GET requests not handled will return our React app
-app.get('/(.*)', (req, res) => {
+// All other requests not handled will return our React app
+app.use((req, res) => {
     res.sendFile(path.join(distPath, 'index.html'));
 });
 
