@@ -45,11 +45,11 @@ export default function Home() {
                         </div>
                         <div className="flex flex-col items-center gap-3">
                             <Award size={32} className="text-warm-gold" />
-                            <span className="font-medium text-sm text-deep-charcoal">NEMA Eco-Certified</span>
+                            <span className="font-medium text-sm text-deep-charcoal">Pure & Eco-Friendly</span>
                         </div>
                         <div className="flex flex-col items-center gap-3">
                             <ShieldCheck size={32} className="text-blue-500" />
-                            <span className="font-medium text-sm text-deep-charcoal">URA Registered</span>
+                            <span className="font-medium text-sm text-deep-charcoal">Fresh Daily Kampala</span>
                         </div>
                     </div>
                 </div>

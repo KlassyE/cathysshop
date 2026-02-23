@@ -11,7 +11,9 @@ export default function AdminDashboard() {
 
     const fetchOrders = async () => {
         try {
-            const res = await fetch('/api/orders');
+            const res = await fetch('/api/orders', {
+                headers: { 'Authorization': password }
+            });
             if (res.ok) {
                 const data = await res.json();
                 setOrders(data);
@@ -36,7 +38,10 @@ export default function AdminDashboard() {
         try {
             const res = await fetch(`/api/orders/${id}/status`, {
                 method: 'PATCH',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': password
+                },
                 body: JSON.stringify({ status: 'completed' })
             });
             if (res.ok) {
