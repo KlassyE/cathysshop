@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-earth-green: #4CAF50;
+  --color-warm-gold: #FDB813;
+  --color-soft-terracotta: #E67E22;
+  --color-deep-charcoal: #333333;
+
+  /* Additional utility colors */
+  --color-kitchen-bg: #FCFBF7;
+}
+
+@layer base {
+  html {
+    font-size: 18px;
+    /* Larger base for older eyes */
+  }
+
+  body {
+    @apply text-deep-charcoal bg-kitchen-bg font-sans antialiased;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif font-bold text-deep-charcoal;
+    line-height: 1.25;
+  }
+}
